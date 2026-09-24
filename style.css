@@ -1,0 +1,116 @@
+/* Universal Styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-weight:inherit;
+    font-size: medium;
+    font-family:italic;
+   
+}
+
+/* Header styles */
+header{
+    padding: 50px 20px; /* top and bottom. left and right */
+    margin: 5px;
+    box-shadow: 1px 2px  rgba( 5,18,17,10);
+    border-radius: 10px;
+    background-color: rgb(226, 184, 250);
+    text-align: center;
+
+
+
+}
+
+header > h1{ /* combinator selector */
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: serif;
+    
+
+}
+
+header > small{ /* combinator selector */
+    font-size: large;
+    font-weight:lighter;
+    font-family: serif;
+    
+
+}
+
+/* Form Styles */
+#formContainer{
+    padding: 20px 20px; /* top and bottom. left and right */
+    margin: 20px;
+    box-shadow: 1px 2px rgba(5,18,17, 10);
+    border-radius: 20px;
+    background-color: rgb(231, 168, 247);
+
+}
+
+
+#formContainer > #studentform >.input-fields > label{
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 30px;
+
+    
+
+}
+#formContainer > #studentform >.input-fields > input {
+    border: 2px solid rgb(197, 105, 182);
+    border-radius: 20px;
+    padding: 10px 100px;
+
+}
+
+#formContainer > #studentform >.input-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+    
+
+article {
+    background-color: rgb(231, 168, 247);
+}
+
+.list-item{
+    padding: 20px 20px; /* top and bottom. left and right */
+    margin: 20px;
+    box-shadow: 1px 2px rgba(5,18,17, 10);
+    border-radius: 20px;
+    background-color:rgb(231, 168, 247);
+
+}
+
+#formContainer > #studentForm :last-child > button {
+    padding: 2px 2px;
+    margin: 0px;
+    border-radius: 15 px;
+    font-weight:lighter;
+    cursor: pointer;
+    width:30%;
+    background-color:rgb(204, 172, 234);
+     
+   
+
+}
+
+#studentList{
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    gap:10px;
+}
+
+@media (width <= 320px){
+    #studentList > .list-item{
+        grid-column: span 12;
+    }
+}
+
+@media (width > 320px) and (width <= 600px){
+    #studentList > .list-item{
+        grid-column: span2;
+    }
+}
