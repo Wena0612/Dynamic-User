@@ -7,7 +7,7 @@ let students = [
     
     {id:4, name: 'wenna', program: 'BSIT'},
     
-    {id:5, name: 'zeddy', program: 'BSNS '}
+    {id:5, name: 'zedy', program: 'BSNS '}
 ];
 
 const createListItem = (student) =>{
