@@ -1,94 +1,93 @@
-/* Universal Styles */
-
-*{
+* {
     margin: 0;
     padding: 0;
-    font-weight:inherit;
+    font-weight: inherit;
     font-size: medium;
-    font-family:apple-system;
-   
+    font-family: apple-system;
 }
 
-/* Header styles */
-header{
-    padding: 50px 20px; /* top and bottom. left and right */
+body {
+    background-color: #f5effb;
+    min-height: 100vh;
+}
+
+header {
+    padding: 50px 20px;
     margin: 5px;
-    box-shadow: 1px 2px  rgba( 5,18,17,10);
+    box-shadow: 1px 2px rgba(5, 18, 17, 10);
     border-radius: 10px;
     background-color: rgb(210, 159, 240);
     text-align: center;
-
-
-
 }
 
-header > h1{ /* combinator selector */
-    font-size:xx-large;
-    font-weight:normal;
-    font-family:apple-system;
-    
-
+header > h1 {
+    font-size: xx-large;
+    font-weight: normal;
+    font-family: apple-system;
 }
 
-header > small{ /* combinator selector */
-    font-size:medium;
-    font-weight:lighter;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-
+header > small {
+    font-size: medium;
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Form Styles */
-#formContainer{
-    padding: 20px 20px; /* top and bottom. left and right */
+#formContainer {
+    padding: 20px 20px;
     margin: 20px;
-    box-shadow: 1px 2px rgba(5,18,17, 10);
+    box-shadow: 1px 2px rgba(5, 18, 17, 10);
     border-radius: 20px;
     background-color: rgba(231, 168, 247, 0.87);
-
 }
 
-
-#formContainer > #studentForm >.input-fields > label{
+#formContainer > #studentForm > .input-fields > label {
     font-weight: lighter;
     font-size: x-large;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-align: center;
-    
-
+    display: block;
+    width: 100%;
 }
-#formContainer > #studentForm >.input-fields > input {
+
+#formContainer > #studentForm > .input-fields > input {
     border: 2px solid rgba(235, 120, 241, 0.607);
     border-radius: 20px;
     padding: 10px 20px;
-
+    width: 80%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: block;
 }
 
-#formContainer > #studentform >.input-fields {
-    display:flex;
-    flex-direction: column;
+#formContainer > #studentForm > .input-fields {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-    
+#formContainer > #studentForm {
+    text-align: center;
+}
 
 article {
     background-color: rgb(204, 122, 225);
 }
 
-.list-item{
-    padding: 20px 20px; /* top and bottom. left and right */
+.list-item {
+    padding: 20px 20px;
     margin: 10px;
-    box-shadow: 1px 2px rgba(5,18,17, 10);
+    box-shadow: 1px 2px rgba(5, 18, 17, 10);
     border-radius: 20px;
-    background-color:rgba(227, 173, 241, 0.893);
-
+    background-color: rgba(227, 173, 241, 0.893);
+    text-align: center;
 }
 
 .list-item > button {
     padding: 6px 10px;
     border: none;
     border-radius: 20px;
-    font-weight:lighter;
+    font-weight: lighter;
     cursor: pointer;
     background-color: rgb(125, 57, 181);
     color: white;
@@ -99,28 +98,32 @@ article {
     margin: 10px auto;
     border: none;
     border-radius: 20px;
-    font-weight:lighter;
+    font-weight: lighter;
     cursor: pointer;
     background-color: rgb(125, 57, 181);
     color: white;
 }
-     
-   
- 
-#studentList{
-    display:grid;
-    grid-template-columns: repeat(12,1fr);
-    gap:10px;
+
+#studentList {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
 }
 
-@media (width <= 320px){
-    #studentList > .list-item{
-        grid-column: span 12;
+@media (max-width: 600px) {
+    #studentList {
+        grid-template-columns: 1fr;
     }
 }
 
-@media (width > 320px) and (width <= 600px){
-    #studentList > .list-item{
-        grid-column: span2;
+@media (min-width: 601px) and (max-width: 900px) {
+    #studentList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    #studentList {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
